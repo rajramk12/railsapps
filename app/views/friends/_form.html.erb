@@ -9,32 +9,39 @@
       </ul>
     </div>
   <% end %>
+  <div class="container">
 
-  <div class="field form-group">
-    <%# <%= form.label :fname, style: "display: block" %>
-    <%= form.text_field :fname , class:"form-control" ,placeholder:"First Name " %>
+  <div class="field form-group col-sm-4"> 
+    <%= form.label :"First Name", style: "display: block" %>
+    <%= form.text_field :fname , class:"form-control", placeholder:"First Name " %>
   </div>
-
-  <div class="field form-group">
-    <%# <%= form.label :lname, style: "display: block" %>
+<br/>
+  <div class="field form-group col-sm-4">
+    <%= form.label :"Last Name", style: "display: block" %>
     <%= form.text_field :lname, class:"form-control", placeholder:"Last Name "  %>
   </div>
-
-  <div class="field form-group">
-    <%# <%= form.label :email, style: "display: block" %>
+<br/>
+  <div class="field form-group col-sm-4">
+    <%= form.label :"Email ID", style: "display: block" %>
     <%= form.text_field :email, class:"form-control", placeholder:"Email ID"  %>
   </div>
-
-  <div class="field form-group">
-    <%# <%= form.label :phone, style: "display: block" %>
+<br/>
+  <div class="field form-group col-sm-4">
+    <%= form.label :"Phone #", style: "display: block" %>
     <%= form.text_field :phone, class:"form-control", placeholder:"Phone"  %>
   </div>
-
-  <div class="field form-group">
-    <%# <%= form.label :twitter, style: "display: block" %>
+<br/>
+  <div class="field form-group col-sm-4">
+    <%= form.label :"Twitter Handle", style: "display: block" %>
     <%= form.text_field :twitter , class:"form-control", placeholder:"Twitter"%>
   </div>
-
+<br/>
+  <div class="field form-group col-sm-4">
+    <%# <%= form.label :"User ID", style: "display: none" %>
+    <%= form.number_field :user_id, id: :friend_user_id, class:"form-control", value:current_user.id ,type: :hidden%>
+  </div>
+  <%= %>
+<br/>
   <div class ="actions">
     <%= form.submit class:"btn btn-secondary" %>
   </div>

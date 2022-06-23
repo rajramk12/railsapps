@@ -1,26 +1,48 @@
-<p style="color: green">
-
-<h1>Friend List</h1>
-<table class="table table-stripped table-hover">
-  <thead class="thead-dark">
-  <tr>
-    <th>First Name </th>
-    <th>Last Name</th>
-    <th>Email</th>
-    <th>Phone</th>
-    <th>Twitter</th>
-    <th colspan ="3"></th>
-  </tr>
-</thead>
-<tbody>
-<%# <div id="friends"> %>
-  <% @friends.each do |friend| %>
-    <%= render friend %>
-    <p>
-      <%= link_to "Show this friend", friend ,class:"btn btn-secondary" %>
-      </p>
-  <% end %>
-<%# </div> %>
-</tbody>
-</table>
+<% if user_signed_in? %>
+<div class="container">
+  <p style="color: green">
+  <h1>Friend List</h1>
+  <div>
+  <table class="table table-stripped table-hover">
+    <thead class="thead-dark">
+    <tr>
+      <th>Name</th>
+      <th>Email </th>
+      <th>Phone </th>
+      <th>Twitter </th>
+      <%# <th>User Id</th> %>
+      <th colspan ="1"> Action</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @friends.each do |friend| %>
+      <% if friend.user == current_user %>
+      <tr>
+          <td>       
+            <%= link_to friend.fname + ' '+ friend.lname, friend_path(friend),class:"btn btn-fill-primary"%> 
+            <%# <%= friend.fname %>
+            <%# <%= friend.lname %>
+          </td> 
+            <td> <%= friend.email %></td> 
+            <td> <%= friend.phone %></td> 
+            <td> <%= friend.twitter %></td> 
+            <%# <td> <%= friend.user_id %></td> 
+            <%# <td> <%= link_to "Show", friend_path(friend) ,class:"btn btn-secondary" %> 
+            <%# <td> <%= link_to "Edit", edit_friend_path(friend) ,class:"btn btn-warning" %>
+            <td> <%= button_to "Delete" ,friend_path(friend), method: :delete, data: { confirm: 'Are you sure to delete this friend?' } , class:"btn btn-warning" %> </td>
+    </tr>
+    <% end %>
+    <% end %>
+  </tbody>
+  </table>
+</div>
 <%= link_to "Add New friend", new_friend_path, class:"btn btn-secondary" %>
+<% else %>
+  <div class= "container-fluid" style="background-color:lightgray;">
+  <h1>Home Page</h1>
+  <p>What are the choices</p>
+  <p>Timesheet</p>
+  <p>ToDo</p>
+</div>
+<% end%>
+

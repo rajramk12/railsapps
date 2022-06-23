@@ -1,8 +1,9 @@
 <p style="color: green">
 <%= render @friend %>
-
 <div>
-  <%= link_to "Edit", edit_friend_path(@friend) ,class:"btn btn-warning"  %>
-  <%= link_to "Back", friends_path,class:"btn btn-secondary" %>
-  <%= link_to "Destroy", @friend , method: :delete %>
+<ul>
+  <%= link_to "Edit", edit_friend_path(@friend) ,class:"btn btn-primary"  %>
+  <%= link_to "Back", friends_path,class:"btn btn-secondary" %> 
+  <%= button_to "Delete", @friend, method: :delete,class:"display: inline-block btn btn-danger"  %> 
+</ul>
 </div>

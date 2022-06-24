@@ -70,7 +70,7 @@ end
 
 group :production do
 # Use Postgres as the database for Active Record
-gem 'pg', '~> 0.18.4'
+  gem 'pg', '~> 0.18.4'
 # gem 'rails_12factor', '~> 0.0.3'
 
 end

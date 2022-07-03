@@ -25,7 +25,7 @@ gem "stimulus-rails"
 # Build JSON APIs with ease [https://github.com/rails/jbuilder]
 gem "jbuilder"
 
-gem 'devise', '~> 4.8', '>= 4.8.1'
+gem "devise"
 
 # gem 'devise-two-factor', '~> 4.0', '>= 4.0.2'
 # Use Redis adapter to run Action Cable in production
@@ -71,7 +71,7 @@ end
 
 group :production do
 # Use Postgres as the database for Active Record
-  gem 'pg'
+  gem "pg"
 # gem 'rails_12factor', '~> 0.0.3'
 
 end

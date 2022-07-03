@@ -40766,3 +40766,69 @@ Processing by FriendsController#index as HTML
 Completed 200 OK in 6ms (Views: 4.9ms | ActiveRecord: 0.0ms | Allocations: 2020)
 
 
+Started GET "/" for 127.0.0.1 at 2022-07-03 09:23:32 +0530
+  [1m[35m (6.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by FriendsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering friends/index.html.erb within layouts/application
+  Rendered friends/index.html.erb within layouts/application (Duration: 7.6ms | Allocations: 722)
+  Rendered home/_header.html.erb (Duration: 1.0ms | Allocations: 686)
+  Rendered layout layouts/application.html.erb (Duration: 222.6ms | Allocations: 25123)
+Completed 200 OK in 287ms (Views: 239.1ms | ActiveRecord: 0.0ms | Allocations: 28912)
+
+
+Started GET "/users/sign_up" for 127.0.0.1 at 2022-07-03 09:23:34 +0530
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_error_messages.html.erb (Duration: 0.5ms | Allocations: 255)
+  Rendered devise/shared/_links.html.erb (Duration: 0.8ms | Allocations: 634)
+  Rendered devise/registrations/new.html.erb within layouts/application (Duration: 100.1ms | Allocations: 5803)
+  Rendered home/_header.html.erb (Duration: 0.3ms | Allocations: 249)
+  Rendered layout layouts/application.html.erb (Duration: 104.7ms | Allocations: 7362)
+Completed 200 OK in 125ms (Views: 109.8ms | ActiveRecord: 0.7ms | Allocations: 13458)
+
+
+Started GET "/" for 127.0.0.1 at 2022-07-03 09:23:36 +0530
+Processing by FriendsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering friends/index.html.erb within layouts/application
+  Rendered friends/index.html.erb within layouts/application (Duration: 0.1ms | Allocations: 42)
+  Rendered home/_header.html.erb (Duration: 0.2ms | Allocations: 199)
+  Rendered layout layouts/application.html.erb (Duration: 3.6ms | Allocations: 1389)
+Completed 200 OK in 5ms (Views: 4.5ms | ActiveRecord: 0.0ms | Allocations: 2049)
+
+
+Started GET "/home/aboutus" for 127.0.0.1 at 2022-07-03 09:23:38 +0530
+Processing by HomeController#aboutus as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/aboutus.html.erb within layouts/application
+  Rendered home/aboutus.html.erb within layouts/application (Duration: 0.5ms | Allocations: 151)
+  Rendered home/_header.html.erb (Duration: 0.6ms | Allocations: 322)
+  Rendered layout layouts/application.html.erb (Duration: 4.6ms | Allocations: 2087)
+Completed 200 OK in 9ms (Views: 7.8ms | ActiveRecord: 0.0ms | Allocations: 2923)
+
+
+Started GET "/users/sign_up" for 127.0.0.1 at 2022-07-03 09:23:39 +0530
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_error_messages.html.erb (Duration: 0.0ms | Allocations: 24)
+  Rendered devise/shared/_links.html.erb (Duration: 0.1ms | Allocations: 98)
+  Rendered devise/registrations/new.html.erb within layouts/application (Duration: 1.9ms | Allocations: 1380)
+  Rendered home/_header.html.erb (Duration: 0.2ms | Allocations: 209)
+  Rendered layout layouts/application.html.erb (Duration: 5.2ms | Allocations: 2731)
+Completed 200 OK in 7ms (Views: 6.0ms | ActiveRecord: 0.0ms | Allocations: 3382)
+
+
+Started GET "/" for 127.0.0.1 at 2022-07-03 09:23:42 +0530
+Processing by FriendsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering friends/index.html.erb within layouts/application
+  Rendered friends/index.html.erb within layouts/application (Duration: 0.1ms | Allocations: 42)
+  Rendered home/_header.html.erb (Duration: 0.2ms | Allocations: 199)
+  Rendered layout layouts/application.html.erb (Duration: 3.6ms | Allocations: 1387)
+Completed 200 OK in 5ms (Views: 4.4ms | ActiveRecord: 0.0ms | Allocations: 1935)
+
+

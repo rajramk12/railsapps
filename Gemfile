@@ -60,7 +60,7 @@ group :development do
   gem "web-console"
 
 # Use sqlite3 as the database for Active Record
-  # gem "sqlite3"
+ gem "sqlite3"
 
   # Add speed badges [https://github.com/MiniProfiler/rack-mini-profiler]
   # gem "rack-mini-profiler"
@@ -75,6 +75,7 @@ end
 
 group :test do
   # Use system testing [https://guides.rubyonrails.org/testing.html#system-testing]
+  gem "sqlite3"
   gem "capybara"
   gem "selenium-webdriver"
   gem "webdrivers"
